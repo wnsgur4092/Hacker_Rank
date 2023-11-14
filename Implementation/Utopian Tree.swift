@@ -24,7 +24,3 @@ func utopianTree(n: Int) -> Int {
 
     return arr[n]
 }
-
-let n = 
-let result = utopianTree(n: n)
-print(result)
