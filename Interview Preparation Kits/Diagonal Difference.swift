@@ -9,9 +9,16 @@ import Foundation
 
 func diagonalDifference(arr: [[Int]]) -> Int {
     // Write your code here
-    let leftRight = arr[0][0] + arr[1][1] + arr[2][2]
-    let rightLeft = arr[0][2] + arr[1][1] + arr[2][0]
+    let n = arr.count
+
+    var leftRight = 0
+    var rightLeft = 0
+    
+    
+    for i in 0..<n{
+        leftRight += arr[i][i]
+        rightLeft += arr[i][n-i-1]
+    }
     
     return abs(leftRight - rightLeft)
 }
-
